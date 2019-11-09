@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G8037" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CustomerOrder" representedClassName="CustomerOrder" syncable="YES" codeGenerationType="class">
+        <attribute name="desert" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entree" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="main" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="table" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Staff" inverseName="tablerel" inverseEntity="Staff" syncable="YES"/>
+    </entity>
+    <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="item" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moreinfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ordertype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Staff" representedClassName="Staff" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tableno" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="tablerel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CustomerOrder" inverseName="table" inverseEntity="CustomerOrder" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CustomerOrder" positionX="-18303.0546875" positionY="-6033.30859375" width="128" height="120"/>
+        <element name="Order" positionX="-18298.4140625" positionY="-6221.99609375" width="128" height="120"/>
+        <element name="Staff" positionX="-18572.16015625" positionY="-5993.3125" width="128" height="105"/>
+    </elements>
+</model>
